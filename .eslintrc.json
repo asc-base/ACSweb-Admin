@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["plugin:@typescript-eslint/recommended", "next", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["react-hooks", "eslint-plugin-unused-imports"],
+  "rules": {
+    "no-empty-function": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/explicit-function-return-type": ["warn", { "allowExpressions": true }]
+  }
 }
