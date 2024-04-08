@@ -2,7 +2,7 @@ import DESIGN_TOKEN from '@/styles/token'
 import { createTheme } from '@mui/material'
 import { Noto_Sans_Thai, Sarabun } from 'next/font/google'
 
-const inter = Noto_Sans_Thai({ weight: '400', subsets: ['thai', 'latin'] })
+const notoSansThai = Noto_Sans_Thai({ weight: '400', subsets: ['thai', 'latin'] })
 const sarabun = Sarabun({ weight: '400', subsets: ['thai', 'latin'] })
 
 const theme = createTheme({
@@ -12,7 +12,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: `${inter.style.fontFamily}, "Roboto", "Helvetica", "Arial", sans-serif`,
+    fontFamily: `${notoSansThai.style.fontFamily}, "Roboto", "Helvetica", "Arial", sans-serif`,
     h1: {
       fontSize: '32px',
     },
@@ -38,6 +38,13 @@ const theme = createTheme({
     body2: {
       fontSize: '16px',
       fontFamily: `${sarabun.style.fontFamily}, "Roboto", "Helvetica", "Arial", sans-serif`,
+    },
+  },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        variant: 'h5',
+      },
     },
   },
 })
