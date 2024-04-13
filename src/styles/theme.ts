@@ -11,7 +11,7 @@ const theme = createTheme({
       main: DESIGN_TOKEN.color.primary[3],
     },
     secondary: {
-      main: DESIGN_TOKEN.color.secondary[2],
+      main: DESIGN_TOKEN.color.secondary[4],
     },
     text: {
       primary: DESIGN_TOKEN.color.primary[1],
